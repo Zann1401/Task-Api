@@ -27,8 +27,12 @@ return [
     | same cache driver to group types of items stored in your caches.
     |
     | Supported drivers: "array", "database", "file", "memcached",
+<<<<<<< HEAD
     |                    "redis", "dynamodb", "storage", "octane",
     |                    "session", "failover", "null"
+=======
+    |                    "redis", "dynamodb", "octane", "null"
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
     |
     */
 
@@ -50,6 +54,7 @@ return [
         'file' => [
             'driver' => 'file',
             'path' => storage_path('framework/cache/data'),
+<<<<<<< HEAD
             'lock_path' => storage_path('framework/cache/locks'),
         ],
 
@@ -57,6 +62,9 @@ return [
             'driver' => 'storage',
             'disk' => env('CACHE_STORAGE_DISK'),
             'path' => env('CACHE_STORAGE_PATH', 'framework/cache/data'),
+=======
+            'lock_path' => storage_path('framework/cache/data'),
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
         ],
 
         'memcached' => [
@@ -97,6 +105,7 @@ return [
             'driver' => 'octane',
         ],
 
+<<<<<<< HEAD
         'failover' => [
             'driver' => 'failover',
             'stores' => [
@@ -105,6 +114,8 @@ return [
             ],
         ],
 
+=======
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
     ],
 
     /*
@@ -118,6 +129,7 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'prefix' => env('CACHE_PREFIX', Str::slug((string) env('APP_NAME', 'laravel')).'-cache-'),
 
     /*
@@ -132,5 +144,8 @@ return [
     */
 
     'serializable_classes' => false,
+=======
+    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
 
 ];

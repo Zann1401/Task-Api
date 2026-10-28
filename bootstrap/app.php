@@ -3,7 +3,10 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
+<<<<<<< HEAD
 use Illuminate\Http\Request;
+=======
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -12,6 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
+<<<<<<< HEAD
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->trustProxies(at: '*');
     })
@@ -19,4 +23,11 @@ return Application::configure(basePath: dirname(__DIR__))
         $exceptions->shouldRenderJsonWhen(
             fn (Request $request) => $request->is('api/*') || $request->expectsJson(),
         );
+=======
+    ->withMiddleware(function (Middleware $middleware) {
+        //
+    })
+    ->withExceptions(function (Exceptions $exceptions) {
+        //
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
     })->create();

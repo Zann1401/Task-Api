@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 //
+=======
+import './bootstrap';
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc

@@ -101,7 +101,11 @@ return [
 
     'previous_keys' => [
         ...array_filter(
+<<<<<<< HEAD
             explode(',', (string) env('APP_PREVIOUS_KEYS', ''))
+=======
+            explode(',', env('APP_PREVIOUS_KEYS', ''))
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
         ),
     ],
 
@@ -114,7 +118,11 @@ return [
     | manage Laravel's "maintenance mode" status. The "cache" driver will
     | allow maintenance mode to be controlled across multiple machines.
     |
+<<<<<<< HEAD
     | Supported drivers: "file", "cache", "array"
+=======
+    | Supported drivers: "file", "cache"
+>>>>>>> 676b395fa7202dab0829ec243b286da87e6a46fc
     |
     */
 
